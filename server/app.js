@@ -25,6 +25,10 @@ app.use(express.json());
 
 //connect mongodb
 connectDB();
+//defalult route
+app.get("/",(req,res)=>{
+  res.json("Welcome to Student Portal")
+})
 
 //routes
 const userRoutes = require("./routes/User");
